@@ -9,3 +9,4 @@ spacy==3.0.5
 scipy==1.4.1
 torch==1.8.1
 widgetsnbextension==3.5.1
+ipywebrtc==0.6.0

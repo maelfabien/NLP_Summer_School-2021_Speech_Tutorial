@@ -1,13 +1,57 @@
-## Please follow these instructions before opening the ASR Notebook
+# Automatic Speech Recognition Tutorial - NLP Summer School
 
-Here, we train an automatic speech recognition system with the SpeechBrain toolkit. The pre-trained models are trained with LibrSpeech 960h train-set. The LM is further enriched with an additonal 1.5GB of text data. Original LibriSpeech recipe --> [here](https://github.com/speechbrain/speechbrain/tree/develop/recipes/LibriSpeech)
+## Please follow these instructions before opening the Notebook
 
-### Pretrained models - NLP summer school
+Here, we will learn how to train an automatic speech recognition system with the SpeechBrain toolkit. The pre-trained models are trained with LibrSpeech 960h train-set. The LM is further enriched with an additional 1.5GB of text data. Original LibriSpeech recipe --> [here](https://github.com/speechbrain/speechbrain/tree/develop/recipes/LibriSpeech)
+
+### Setting up your environment
+
+```bash
+conda create --name nlp_summer_school python=3.8
+conda activate nlp_summer_school
+pip install -r requirements.txt
+conda install -c conda-forge jupyterlab
+```
+### Activate your environment
+
+```bash
+conda activate nlp_summer_school
+sudo apt install ffmpeg
+pip install notebook
+jupyter nbextension enable --py widgetsnbextension
+cd /Folder/of/Experiments
+```
+### Download the pre-trained models beforehand
+
+Pretrained models --> [Drive Link - 0.9GB](https://drive.google.com/drive/folders/1tFp7usKJ0qIJ8ofuil9RgNm5lJ080hgc?usp=sharing)
+
+```bash
+cp Download/pretrained_models.zip . 
+unzip pretrained_models.zip
+```
+
+Here, you should have a folder called 'pretrained_models'. There are four files inside: 
+- lm.ckpt: Language Model (checkpoint/model),
+- asr.ckpt: Acoustic Model (encoder-decoder)(checkpoint/model),
+- tokenizer.ckpt: Tokenizer used in LM and AM (checkpoint/model),
+- hyperparams.yaml: file with the hyperparameters of all these models + the beam-searcher decoder (params).
+
+After this, you should be able to run the Notebook without any problems.
+
+### Play with the Notebook
+
+Type `Jupyter-lab` in the terminal:
+```bash
+jupyter-lab
+```
+Open the Notebook --> `ASR_modules.ipynb`
+
+## Pretrained models - NLP summer school
 
 For the sake of simplicity we provide pre-trained models from Huggingface, for Acoustic & Language Model and Tokenizer, download them beforehand. We are using the best model for LibriSpeech from huggingface:
 - [Transformer + ctc + TransformerLM](https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech)
 
-### Train your own automatic speech recognizer from scratch 
+## Train your own automatic speech recognizer from scratch 
 
 To train a full speech recognition system the pipeline is the following:
 1. **Train a tokenizer.** The tokenizer takes in input the training transcripts and determines the subword units that will be used for both acoustic and language model training. **Training a tokenizer before the language and acoustic model is necessary**. Indeed, both of them will reuse this tokenizer to map the output tokens.
@@ -21,6 +65,6 @@ SpeechBrain provides a simple interface to transcribe audio files with pretraine
 - [seq2seq (ctc+attention) + TransformerLM](https://huggingface.co/speechbrain/asr-crdnn-transformerlm-librispeech)
 - [Transformer + ctc + TransformerLM](https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech)
 
-### Pretrained models + further training 
+## Pretrained models + further training 
 
-To fine-tune the pre-trained models, you need to first download them and modify accordingly the training YAML configuration files; such as: `ASR/LibriSpeech/ASR/transformer/hparams/transformer.yaml`
+To fine-tune the pre-trained models, you need to first download the models (e.g. `pretrained_models.zip`) and modify accordingly the training `YAML configuration scripts`; such as: `ASR/LibriSpeech/ASR/transformer/hparams/transformer.yaml`

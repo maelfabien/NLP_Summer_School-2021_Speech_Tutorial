@@ -6,17 +6,17 @@ Here, we will learn how to train an automatic speech recognition system with the
 
 ### Setting up your environment
 
+Skip the block below, if you already did it in the folder before.
 ```bash
-sudo apt install ffmpeg
 conda create --name nlp_summer_school python=3.8
 conda activate nlp_summer_school
 pip install -r requirements.txt
-conda install -c conda-forge jupyterlab
 ```
 ### Activate your environment
 
 ```bash
 conda activate nlp_summer_school
+conda install -c conda-forge jupyterlab
 sudo apt install ffmpeg
 pip install notebook
 jupyter nbextension enable --py widgetsnbextension

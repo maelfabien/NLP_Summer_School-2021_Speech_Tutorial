@@ -7,6 +7,8 @@ This repository contains the code for the workshop (Tutorial) given at the Mexic
 ### How to install
 
 ```bash
+conda create --name nlp_summer_school python=3.8
+conda activate nlp_summer_school
 pip install -r requirements.txt
 ```
 

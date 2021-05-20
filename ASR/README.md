@@ -7,6 +7,7 @@ Here, we will learn how to train an automatic speech recognition system with the
 ### Setting up your environment
 
 ```bash
+sudo apt install ffmpeg
 conda create --name nlp_summer_school python=3.8
 conda activate nlp_summer_school
 pip install -r requirements.txt

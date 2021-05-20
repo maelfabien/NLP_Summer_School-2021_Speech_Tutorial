@@ -18,7 +18,6 @@ pip install -r requirements.txt
 conda activate nlp_summer_school
 conda install -c conda-forge jupyterlab
 sudo apt install ffmpeg
-pip install notebook
 jupyter nbextension enable --py widgetsnbextension
 cd /Folder/of/Experiments
 ```
@@ -27,7 +26,7 @@ cd /Folder/of/Experiments
 Pretrained models --> [Drive Link - 0.9GB](https://drive.google.com/drive/folders/1tFp7usKJ0qIJ8ofuil9RgNm5lJ080hgc?usp=sharing)
 
 ```bash
-cp Download/pretrained_models.zip . 
+cp Downloads/pretrained_models.zip . 
 unzip pretrained_models.zip
 ```
 
@@ -43,9 +42,9 @@ After this, you should be able to run the Notebook without any problems.
 
 Type `Jupyter-lab` in the terminal:
 ```bash
-jupyter-lab
+jupyter-lab ASR_example.ipynb
 ```
-Open the Notebook --> `ASR_modules.ipynb`
+Open the Notebook --> `ASR_examples.ipynb`
 
 ## Pretrained models - NLP summer school
 

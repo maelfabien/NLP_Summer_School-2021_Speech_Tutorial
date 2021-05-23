@@ -1,0 +1,142 @@
+2021-03-16 07:48:59,051 - speechbrain.core - INFO - Beginning experiment!
+2021-03-16 07:48:59,051 - speechbrain.core - INFO - Experiment folder: results/voxceleb1/speaker_verification_plda_xvectors
+2021-03-16 07:48:59,422 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==20.3.0
+black==19.10b0
+certifi==2020.12.5
+cfgv==3.2.0
+chardet==4.0.0
+click==7.1.2
+distlib==0.3.1
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.6
+HyperPyYAML==1.0.0
+identify==2.1.3
+idna==2.10
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.7.0
+nodeenv==1.5.0
+numpy==1.20.1
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.11.1
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2020.11.13
+requests==2.25.1
+ruamel.yaml==0.16.13
+ruamel.yaml.clib==0.2.2
+scipy==1.6.1
+sentencepiece==0.1.95
+six==1.15.0
+-e git+https://github.com/speechbrain/speechbrain.git@34bcf9d0783cf72a952674032834383194018b7b#egg=speechbrain
+toml==0.10.2
+torch==1.8.0
+torchaudio==0.8.0
+tqdm==4.59.0
+typed-ast==1.4.2
+typing-extensions==3.7.4.3
+urllib3==1.26.4
+virtualenv==20.4.2
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-03-16 07:48:59,436 - speechbrain.utils.superpowers - DEBUG - 34bcf9d0
+
+
+2021-03-16 07:48:59,437 - __main__ - INFO - Data preparation
+2021-03-16 07:48:59,437 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-03-16 07:48:59,459 - voxceleb_prepare - INFO - 	"Creating csv lists in  results/voxceleb1/speaker_verification_plda_xvectors/save/train.csv..."
+2021-03-16 07:48:59,461 - voxceleb_prepare - INFO - 	results/voxceleb1/speaker_verification_plda_xvectors/save/train.csv Sucessfully created!
+2021-03-16 07:48:59,543 - voxceleb_prepare - INFO - preparing enrol csv
+2021-03-16 07:48:59,544 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_plda.py", line 243, in <module>
+    prepare_voxceleb(
+  File "/Users/maelfabien/speechbrain/recipes/VoxCeleb/SpeakerRec/voxceleb_prepare.py", line 156, in prepare_voxceleb
+    prepare_csv_enrol_test(
+  File "/Users/maelfabien/speechbrain/recipes/VoxCeleb/SpeakerRec/voxceleb_prepare.py", line 468, in prepare_csv_enrol_test
+    signal, fs = torchaudio.load(wav)
+  File "/Users/maelfabien/opt/anaconda3/envs/speechbrain/lib/python3.8/site-packages/torchaudio/backend/sox_io_backend.py", line 150, in load
+    return torch.ops.torchaudio.sox_io_load_audio_file(
+RuntimeError: Error loading audio file: failed to open file.
+2021-03-16 07:55:22,379 - speechbrain.core - INFO - Beginning experiment!
+2021-03-16 07:55:22,384 - speechbrain.core - INFO - Experiment folder: results/voxceleb1/speaker_verification_plda_xvectors
+2021-03-16 07:55:22,712 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==20.3.0
+black==19.10b0
+certifi==2020.12.5
+cfgv==3.2.0
+chardet==4.0.0
+click==7.1.2
+distlib==0.3.1
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.6
+HyperPyYAML==1.0.0
+identify==2.1.3
+idna==2.10
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.7.0
+nodeenv==1.5.0
+numpy==1.20.1
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.11.1
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2020.11.13
+requests==2.25.1
+ruamel.yaml==0.16.13
+ruamel.yaml.clib==0.2.2
+scipy==1.6.1
+sentencepiece==0.1.95
+six==1.15.0
+-e git+https://github.com/speechbrain/speechbrain.git@34bcf9d0783cf72a952674032834383194018b7b#egg=speechbrain
+toml==0.10.2
+torch==1.8.0
+torchaudio==0.8.0
+tqdm==4.59.0
+typed-ast==1.4.2
+typing-extensions==3.7.4.3
+urllib3==1.26.4
+virtualenv==20.4.2
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-03-16 07:55:22,726 - speechbrain.utils.superpowers - DEBUG - 34bcf9d0
+
+
+2021-03-16 07:55:22,727 - __main__ - INFO - Data preparation
+2021-03-16 07:55:22,727 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-03-16 07:55:22,745 - voxceleb_prepare - INFO - 	"Creating csv lists in  results/voxceleb1/speaker_verification_plda_xvectors/save/train.csv..."
+2021-03-16 07:55:22,747 - voxceleb_prepare - INFO - 	results/voxceleb1/speaker_verification_plda_xvectors/save/train.csv Sucessfully created!
+2021-03-16 07:55:22,822 - voxceleb_prepare - INFO - preparing enrol csv
+2021-03-16 07:55:22,822 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_plda.py", line 243, in <module>
+    prepare_voxceleb(
+  File "/Users/maelfabien/speechbrain/recipes/VoxCeleb/SpeakerRec/voxceleb_prepare.py", line 156, in prepare_voxceleb
+    prepare_csv_enrol_test(
+  File "/Users/maelfabien/speechbrain/recipes/VoxCeleb/SpeakerRec/voxceleb_prepare.py", line 468, in prepare_csv_enrol_test
+    signal, fs = torchaudio.load(wav)
+  File "/Users/maelfabien/opt/anaconda3/envs/speechbrain/lib/python3.8/site-packages/torchaudio/backend/sox_io_backend.py", line 150, in load
+    return torch.ops.torchaudio.sox_io_load_audio_file(
+RuntimeError: Error loading audio file: failed to open file.

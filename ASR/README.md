@@ -6,7 +6,7 @@ Here, we will learn how to train an automatic speech recognition system with the
 
 ### Setting up your environment
 
-Skip the block below, if you already did it in the folder before.
+Skip the block below, if you already did it in the folder before --> `NLP_Summer_School-2021_Speech_Tutorial`.
 ```bash
 conda create --name nlp_summer_school python=3.8
 conda activate nlp_summer_school
@@ -24,17 +24,19 @@ cd /Folder/of/Experiments
 ### Download the pre-trained models beforehand
 
 Pretrained models --> [Drive Link - 0.9GB](https://drive.google.com/drive/folders/1tFp7usKJ0qIJ8ofuil9RgNm5lJ080hgc?usp=sharing)
+(The command below copies the zip file from the Downloads folder to your experiment folder. You could do this manually)
 
 ```bash
 cp Downloads/pretrained_models.zip . 
 unzip pretrained_models.zip
 ```
 
-Here, you should have a folder called 'pretrained_models'. There are four files inside: 
+Here, you should have a folder called 'pretrained_models'. There are seven files inside: 
 - lm.ckpt: Language Model (checkpoint/model),
 - asr.ckpt: Acoustic Model (encoder-decoder)(checkpoint/model),
 - tokenizer.ckpt: Tokenizer used in LM and AM (checkpoint/model),
-- hyperparams.yaml: file with the hyperparameters of all these models + the beam-searcher decoder (params).
+- 3 hyperparams.yaml files: file with the hyperparameters of all these models + the beam-searcher decoder (params),
+- example.wav: a recording in case you are not able to use your mic to record your own voice. 
 
 After this, you should be able to run the Notebook without any problems.
 
@@ -42,13 +44,15 @@ After this, you should be able to run the Notebook without any problems.
 
 Type `Jupyter-lab` in the terminal:
 ```bash
+jupyter-lab
+or
 jupyter-lab ASR_example.ipynb
 ```
-Open the Notebook --> `ASR_examples.ipynb`
+Open the Notebook (file explorer in the left) --> `ASR_examples.ipynb`
 
 ## Pretrained models - NLP summer school
 
-For the sake of simplicity we provide pre-trained models from Huggingface, for Acoustic & Language Model and Tokenizer, download them beforehand. We are using the best model for LibriSpeech from huggingface:
+For the sake of simplicity we provide pre-trained models from Huggingface, for Acoustic & Language Model and Tokenizer, download them beforehand. We are using the best model for LibriSpeech from huggingface (disclaimer: we already did this at the begining, you can skip this :):
 - [Transformer + ctc + TransformerLM](https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech)
 
 ## Train your own automatic speech recognizer from scratch 

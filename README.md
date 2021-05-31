@@ -7,6 +7,7 @@ This repository contains the code for speech components (ASR and Speaker Verific
 ### How to install
 
 ```bash
+git clone https://github.com/maelfabien/NLP_Summer_School-2021_Speech_Tutorial
 conda create --name nlp_summer_school python=3.8
 conda activate nlp_summer_school
 pip install -r requirements.txt

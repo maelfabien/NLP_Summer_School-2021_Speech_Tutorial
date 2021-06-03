@@ -30,6 +30,7 @@ Pretrained models --> [Drive Link - 0.9GB](https://drive.google.com/drive/folder
 cp Downloads/pretrained_models.zip . 
 unzip pretrained_models.zip
 ```
+**WARNING!!** If you get this message: `replace pretrained_models/example.wav?`. Please, type the letter `A` ([A]ll).
 
 Here, you should have a folder called 'pretrained_models'. There are seven files inside: 
 - lm.ckpt: Language Model (checkpoint/model),

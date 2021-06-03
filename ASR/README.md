@@ -8,14 +8,14 @@ Here, we will learn how to train an automatic speech recognition system with the
 
 Skip the block below, if you already did it in the folder before --> `NLP_Summer_School-2021_Speech_Tutorial`.
 ```bash
-conda create --name nlp_summer_school python=3.8
-conda activate nlp_summer_school
+conda create --name nlp_summer_school_tutorial python=3.8
+conda activate nlp_summer_school_tutorial
 pip install -r requirements.txt
 ```
 ### Activate your environment
 
 ```bash
-conda activate nlp_summer_school
+conda activate nlp_summer_school_tutorial
 conda install -c conda-forge jupyterlab
 sudo apt install ffmpeg
 jupyter nbextension enable --py widgetsnbextension
